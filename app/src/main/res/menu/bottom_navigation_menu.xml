@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/navigation_home"
+            android:title="Inicio"
+            android:icon="@drawable/ic_home"
+             />
+    <item
+            android:id="@+id/navigation_alumno"
+            android:title="Alumnos"
+            android:icon="@drawable/icon_person"
+             />
+    <item
+            android:id="@+id/navigation_carrera"
+            android:title="Carreras"
+            android:icon="@drawable/ic_carrera"
+             />
+</menu>

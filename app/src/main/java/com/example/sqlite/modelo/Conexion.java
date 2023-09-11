@@ -147,7 +147,7 @@ public class Conexion extends SQLiteOpenHelper {
         values.put("nombre" , carrera.getNombre());
 
 
-       long result= db.update("carreras",values,"id="+carrera.getId(),null);
+        long result= db.update("carreras",values,"id="+carrera.getId(),null);
 
         if (result==-1){
             Toast.makeText(context,"Error!!! ", Toast.LENGTH_LONG).show();

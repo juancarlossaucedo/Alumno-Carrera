@@ -8,7 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.sqlite.R;
 import com.example.sqlite.modelo.Conexion;
-import com.example.sqlite.modelo.Contacto;
 import com.example.sqlite.modelo.mdlCarrera;
 
 public class frmAgregarC extends AppCompatActivity {

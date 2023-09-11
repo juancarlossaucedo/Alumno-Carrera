@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.sqlite.R;
 import com.example.sqlite.modelo.Conexion;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -20,11 +21,14 @@ public class listaCarrera extends AppCompatActivity {
 
     FloatingActionButton btnAgregarC;
 
+
     Conexion con;
 
     ArrayList<String> ids ,nombre;
 
     AdaptadorC adaptador;
+
+    BottomNavigationView bottomNavigationView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +60,37 @@ public class listaCarrera extends AppCompatActivity {
         listaC.setAdapter(adaptador);
 
         listaC.setLayoutManager(new LinearLayoutManager(this));
+
+
+        bottomNavigationView = findViewById(R.id.bottom_navigation3);
+
+        bottomNavigationView.setOnNavigationItemSelectedListener(
+                item -> {
+                    switch (item.getItemId()) {
+                        case R.id.navigation_home:
+                            Intent home = new Intent(this, MainActivity.class);
+                            startActivity(home);
+                            return true;
+
+                        case R.id.navigation_alumno:
+                            Intent alumno = new Intent(this, listaContactos.class);
+                            startActivity(alumno);
+                            return true;
+                        case R.id.navigation_carrera:
+                            Intent carrera = new Intent(this, listaCarrera.class);
+                            startActivity(carrera);
+                            return true;
+                    }
+                    return false;
+                }
+        );
     }
 
     void prepararDatos(){
         Cursor cursor = con.consultarC();
 
         if (cursor.getCount() == 0){
-            Toast.makeText(this,"Aun no hay Registro", Toast.LENGTH_LONG);
+            Toast.makeText(this,"Aun no hay Registro", Toast.LENGTH_LONG).show();
         }else {
             while (cursor.moveToNext()){
                 ids.add("" + cursor.getInt(0));

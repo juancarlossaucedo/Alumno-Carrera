@@ -36,6 +36,12 @@
             android:layout_height="58dp" android:id="@+id/btnGuardarC"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
 
+            android:backgroundTint="#F30000"
+
+            app:cornerRadius="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginBottom="216dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

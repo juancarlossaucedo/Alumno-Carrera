@@ -51,22 +51,39 @@
             android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
     <Spinner
-            android:layout_width="412dp"
-            android:layout_height="51dp" android:id="@+id/spCarrera2"
+            android:layout_width="372dp"
+            android:layout_height="53dp" android:id="@+id/spCarrera2"
             app:layout_constraintTop_toBottomOf="@+id/txtCorreo2"
-            android:layout_marginTop="40dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
+            android:layout_marginTop="32dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.282"/>
     <Button
             android:text="Actualizar"
-            android:layout_width="164dp"
-            android:layout_height="50dp" android:id="@+id/btnActualizar"
+            android:layout_width="220dp"
+            android:layout_height="60dp"
+            android:id="@+id/btnActualizar"
+
+            android:backgroundTint="#0220C8"
+
+            app:cornerRadius="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.437"
             android:layout_marginBottom="128dp"/>
     <Button
             android:text="Eliminar"
-            android:layout_width="159dp"
-            android:layout_height="50dp" android:id="@+id/btnEliminar"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:id="@+id/btnEliminar"
+
+            android:backgroundTint="#F30000"
+
+            app:cornerRadius="15dp"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="25dp"
+
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnActualizar" android:layout_marginTop="16dp"
             app:layout_constraintHorizontal_bias="0.444" app:layout_constraintBottom_toBottomOf="parent"

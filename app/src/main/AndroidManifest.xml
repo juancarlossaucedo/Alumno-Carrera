@@ -12,6 +12,9 @@
             android:theme="@style/Theme.SQLite"
             tools:targetApi="31">
         <activity
+                android:name=".vistas.BaseActivity"
+                android:exported="false"/>
+        <activity
                 android:name=".vistas.ActualizarC"
                 android:exported="false"/>
         <activity
@@ -38,6 +41,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

@@ -60,7 +60,10 @@ public class Adaptador  extends RecyclerView.Adapter<Adaptador.Vista> {
     public void onBindViewHolder(@NonNull @NotNull Adaptador.Vista holder, @SuppressLint("RecyclerView") final int position) {
 
         holder.txtShoNombre.setText(nombre.get(position));
-        holder.txtShoApellido.setText(apellido.get(position));
+        holder.txtShoApellido.setText(correo.get(position));
+        holder.TextViewCarrera.setText(carrera.get(position));
+
+
 
 
         fila.setOnClickListener(new View.OnClickListener() {
@@ -88,7 +91,7 @@ public class Adaptador  extends RecyclerView.Adapter<Adaptador.Vista> {
 
     public class Vista extends RecyclerView.ViewHolder{
 
-        TextView txtShoNombre , txtShoApellido;
+        TextView txtShoNombre , txtShoApellido , TextViewCarrera;
 
 
 
@@ -97,6 +100,8 @@ public class Adaptador  extends RecyclerView.Adapter<Adaptador.Vista> {
 
             txtShoNombre = itemView.findViewById(R.id.txtShoNombre);
             txtShoApellido = itemView.findViewById(R.id.textShoApellido);
+
+            TextViewCarrera = itemView.findViewById(R.id.TextViewCarrera);
 
             fila = itemView.findViewById(R.id.fila);
 

@@ -5,62 +5,107 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
         tools:context=".vistas.Agregar">
 
-    <EditText
-            android:id="@+id/txtID"
-            android:layout_width="396dp"
-            android:layout_height="45dp"
-            android:inputType="number"
-            android:ems="10"
-            android:hint="ID"
 
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="60dp"
-            app:layout_constraintHorizontal_bias="0.164"/>
-    <EditText
-            android:layout_width="415dp"
-            android:layout_height="53dp"
-            android:inputType="textPersonName"
-            android:hint="Nombre"
-            android:ems="10"
-            android:id="@+id/txtNombre"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/txtID"
-            android:layout_marginTop="40dp"/>
-    <EditText
-            android:layout_width="410dp"
-            android:layout_height="49dp"
-            android:inputType="textPersonName"
-            android:hint="Apellidos"
-            android:ems="10"
-            android:id="@+id/txtApellido"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintTop_toBottomOf="@+id/txtNombre" android:layout_marginTop="44dp"/>
-    <EditText
-            android:layout_width="408dp"
-            android:layout_height="41dp"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:hint="Email@gmail.com"
-            android:id="@+id/txtCorreo"
-            app:layout_constraintTop_toBottomOf="@+id/txtApellido"
-            android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
-    <Spinner
+    <LinearLayout
+
+            android:id="@+id/linearLayout"
             android:layout_width="412dp"
-            android:layout_height="51dp" android:id="@+id/spCarrera"
-            app:layout_constraintTop_toBottomOf="@+id/txtCorreo"
-            android:layout_marginTop="40dp" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
-    <Button
-            android:text="Agregar"
-            android:layout_width="215dp"
-            android:layout_height="58dp" android:id="@+id/btnGuardar"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
-
+            android:layout_height="728dp"
+            android:orientation="vertical"
+            android:padding="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="84dp"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.444"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.496"
+
+    >
+
+
+        <EditText
+                android:id="@+id/txtID"
+                android:layout_width="379dp"
+                android:layout_height="45dp"
+                android:inputType="number"
+                android:ems="10"
+                android:hint="ID"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="60dp"
+                app:layout_constraintHorizontal_bias="0.164"/>
+        <EditText
+                android:layout_width="379dp"
+                android:layout_height="53dp"
+                android:inputType="textPersonName"
+                android:hint="Nombre"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:id="@+id/txtNombre"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0" app:layout_constraintTop_toBottomOf="@+id/txtID"
+                android:layout_marginTop="40dp"/>
+        <EditText
+                android:layout_width="379dp"
+                android:layout_height="49dp"
+                android:inputType="textPersonName"
+                android:hint="Apellidos"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:ems="10"
+                android:layout_gravity="center"
+                android:id="@+id/txtApellido"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombre" android:layout_marginTop="44dp"/>
+        <EditText
+                android:layout_width="379dp"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:ems="10"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="Email@gmail.com"
+                android:layout_gravity="center"
+                android:id="@+id/txtCorreo"
+                app:layout_constraintTop_toBottomOf="@+id/txtApellido"
+                android:layout_marginTop="52dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
+        <Spinner
+                android:layout_width="379dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_gravity="center"
+                android:layout_height="51dp" android:id="@+id/spCarrera"
+                app:layout_constraintTop_toBottomOf="@+id/txtCorreo"
+                android:layout_marginTop="40dp" app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="1.0"/>
+
+        <Button
+                android:text="Agregar"
+                android:layout_width="227dp"
+                android:layout_height="65dp" android:id="@+id/btnGuardar"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="70dp"
+                android:backgroundTint="#ECA742"
+
+                app:cornerRadius="15dp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:layout_gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginBottom="84dp"/>
+
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
